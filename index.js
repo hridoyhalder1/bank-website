@@ -15,10 +15,11 @@ document.getElementById('btn').addEventListener('click',function(){
     // step-4: verfiy email and password
 
     if(email === 'rayonridu9@gmail.com' && password === 'ridoy12345'){
-        console.log('valid user')
+        window.location.href = 'bank.html';
     }
     else{
-        console.log('invalid user')
+        // console.log('invalid user')
+        alert('Forgotten Password?')
     }
 
 })
