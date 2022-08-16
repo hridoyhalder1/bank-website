@@ -12,15 +12,23 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const previousWithdrawTotalString = withDrawTotal.innerText;
     const previousWithDrawAmount = parseFloat(previousWithdrawTotalString);
     
-    // step-4: calculate the total withdraw amount
-
-    const currentTotalAmount = previousWithDrawAmount + newWithDrawAmount;
-    withDrawTotal.innerText = currentTotalAmount;
+    // step-7: clear the withdraw field
+    withdrawField.value= '';
 
     // step-5: get balance current total
     const balanceTotalField = document.getElementById('balance-total');
     const previousBalanceTotalString = balanceTotalField.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+    if(newWithDrawAmount > previousBalanceTotal){
+        alert('Bap er Bank e Eto Taka nai');
+        return;
+    }
+
+     // step-4: calculate the total withdraw amount
+
+     const currentTotalAmount = previousWithDrawAmount + newWithDrawAmount;
+     withDrawTotal.innerText = currentTotalAmount;
+
 
     // step-6: claculate new balance total and set new balance total
 
@@ -28,8 +36,7 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     balanceTotalField.innerText = currentBalanceTotal;
 
 
-    // step-7: clear the withdraw field
-    withdrawField.value= '';
+    
 
 
 
