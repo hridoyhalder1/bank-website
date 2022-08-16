@@ -9,24 +9,54 @@
 </head>
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-6">Welcome to your <span class=" font-semibold text-violet-600 ">Bap Er
-            Bank</span></h1>
+        <h1 class="text-5xl text-center mt-6">Let's get some <span class=" font-semibold text-violet-600 ">Moooooooney!!!</span></h1>
     </header>
     <section> 
         <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto mt-12">
             <div class="bg-amber-600 p-8 rounded">
                 <h3 class=" text-2xl font-medium text-white text-center ">Deposit</h3>
-                <h2 class="text-3xl font-medium text-white text-center">$00</h2>
+                <h2 class="text-3xl font-medium text-white text-center">$<span id="deposit-total">00</span></h2>
             </div>
             <div class="bg-yellow-50 p-8 rounded">
-                <h3 class=" text-2xl font-medium text-blue-900 text-center ">Deposit</h3>
-                <h2 class="text-3xl font-medium text-blue-900 text-center">$00</h2>
+                <h3 class=" text-2xl font-medium text-blue-900 text-center ">Withdraw</h3>
+                <h2 class="text-3xl font-medium text-blue-900 text-center">$<span id="withdraw-total">00</span></h2>
             </div>
             <div class="bg-green-600 p-8 rounded">
-                <h3 class=" text-2xl font-medium text-white text-center ">Deposit</h3>
-                <h2 class="text-3xl font-medium text-white text-center">$1240</h2>
+                <h3 class=" text-2xl font-medium text-white text-center ">Current Balance</h3>
+                <h2 class="text-3xl font-medium text-white text-center">$<span id="balance-total">1240</span></h2>
             </div>
         </div>
     </section>
+
+    <!-- Deposit and withdraw -->
+    <section>
+        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-12">
+            <div class="bg-purple-500 p-8 rounded">
+                <h2 class=" text-2xl font-medium text-white mb-3 ">Please Deposit</h2>               
+                
+                    <form action="">
+                        <input id="deposit-field" class="w-9/12 block p-2 rounded outline-0" type="number"
+                    placeholder="$ amount you want to deposit" required><br>
+                <button id="btn-deposit"
+                    class="bg-rose-600  px-8 py-2 text-white font-semibold rounded hover:bg-sky-700">Deposit</button>
+                    </form>
+                
+            </div>
+            <div class="bg-pink-500 p-8 rounded">
+                <h2 class=" text-2xl font-medium text-white mb-3 ">Please Withdraw</h2>               
+                
+                    <form action="">
+                        <input id="withdraw-field" class="w-9/12 block p-2 rounded outline-0" type="number"
+                    placeholder="$ amount you want to withdraw" required><br>
+                    <button id="btn-withdraw"
+                        class="bg-rose-600  px-8 py-2 text-white font-semibold rounded hover:bg-sky-700">Withdraw</button>
+                    </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
 </body>
 </html>
