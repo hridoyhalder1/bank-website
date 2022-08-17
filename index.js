@@ -14,7 +14,7 @@ document.getElementById('btn').addEventListener('click',function(){
     const password = passwordField.value;
     // step-4: verfiy email and password
 
-    if(email === 'rayonridu9@gmail.com' && password === 'ridoy12345'){
+    if(email === 'sonaliseba@gmail.com' && password === 'sonaliseba'){
         window.location.href = 'bank.html';
     }
     else{
